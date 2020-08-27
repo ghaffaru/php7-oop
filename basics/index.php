@@ -5,5 +5,21 @@ require('./Calculator.php');
 
 $calculator1 = new Calculator(10, 20);
 
-echo $calculator1->add();
+echo '<br />';
+echo 'Add: ' . $calculator1->add();
+
+echo '<br />';
+echo 'Subtraction: ' . $calculator1->subtract();
+
+echo '<br />';
+
+echo 'Multiply: ' . $calculator1->multiply();
+
+echo '<br />';
+
+echo 'Division: ' . $calculator1->divide();
+
+
+
+
 
