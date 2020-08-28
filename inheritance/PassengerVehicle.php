@@ -1,5 +1,7 @@
 <?php
 
+require('./Vehicle.php');
+
 class PassengerVehicle extends Vehicle
 {
     private $passengerSeats;

@@ -1,5 +1,7 @@
 <?php
 
+require('./Vehicle.php');
+
 class TransportationVehicle extends Vehicle
 {
     private $noOfDoors;
