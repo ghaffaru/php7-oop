@@ -15,4 +15,9 @@ class PassengerVehicle extends Vehicle
     {
         $this->passengerSeats = $seats;
     }
+
+    public function doMaintainance()
+    {
+        # code...
+    }
 }

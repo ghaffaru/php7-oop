@@ -1,7 +1,7 @@
 <?php
 
 // extends another subclass 'PassengerVehicle'
-require('./PassengerVehicle.php');
+// require('./PassengerVehicle.php');
 
 class Bike extends PassengerVehicle
 {
@@ -15,5 +15,19 @@ class Bike extends PassengerVehicle
     public function setSaddleHeight($saddleHeight)
     {
         $this->saddleHeight = $saddleHeight;
+    }
+
+    // Overriding
+    public function accelerate()
+    {
+        echo "Bike acceleration";
+    }
+
+    // Overriding
+    public function brake()
+    {
+        // Calling the parent first. ie. preserving the functionality of the parent class
+        echo parent::brake();
+        echo 'Bike brake then';
     }
 }

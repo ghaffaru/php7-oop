@@ -2,6 +2,7 @@
 
 // Using the classes
 require('./Car.php');
+require('./Bike.php');
 
 $car = new Car();
 
@@ -22,3 +23,6 @@ echo $car->getColor();
 $car->accelerate();
 $car->brake();
 
+$bike1 = new Bike();
+$bike1->accelerate();
+$bike1->brake();

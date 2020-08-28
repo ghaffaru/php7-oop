@@ -26,4 +26,9 @@ class TransportationVehicle extends Vehicle
     {
         $this->loadCapacity = $loadCapacity;
     }
+
+    public function doMaintainance()
+    {
+        # code...
+    }
 }
