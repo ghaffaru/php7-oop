@@ -32,6 +32,21 @@ class Student
             'Student Level' => $this->level
         ];
     }
+
+    // before object serialization
+    public function __sleep()
+    {
+        // do stuff
+        return [
+            'name'
+        ];
+    }
+
+    // after unserializing an object
+    public function __wakeup()
+    {
+        echo 'Unserialized';
+    }
 }
 
 // Usage
@@ -45,3 +60,9 @@ if (is_callable($student1))
 }
 
 var_dump($student1); // overwritten by __debugInfo
+
+serialize($student1); // serializing to trigger __sleep
+
+echo serialize($student1);
+
+unserialize(serialize($student1));
