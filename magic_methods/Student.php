@@ -6,10 +6,12 @@ class Student
 
     private $level;
 
-    public function __construct($name, $level)
+    private $info;
+    public function __construct($name, $level, $info)
     {
         $this->name = $name;
         $this->level = $level;
+        $this->info = $info;
     }
 
     // what to do when object is called as a string
@@ -46,6 +48,19 @@ class Student
     public function __wakeup()
     {
         echo 'Unserialized';
+    }
+
+    // what to do when object is cloned (Deep Cloning)
+    public function __clone()
+    {
+        
+        foreach ($this as $key => $value)
+        {
+            if (is_object($value))
+            {
+                $this->$key = clone $this->$key;
+            }
+        }
     }
 }
 
